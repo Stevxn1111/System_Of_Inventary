@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Factura - ABL Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="nueva-factura-page">
+    <div class="page-card">
+        <section class="action-buttons-panel">
+            <button type="button">Guardar Borrador</button>
+            <button type="button">Guardar y Firmar</button>
+            <button type="button">Guardar y Agregar Pago</button>
+            <button type="button" onclick="location.href='index.html'" class="btn-volver">Volver al Menú</button>
+        </section>
+
+        <section class="cliente-panel">
+            <h2>Buscar Clientes</h2>
+            <div class="cliente-search">
+                <input type="text" placeholder="Buscar cliente por nombre...">
+            </div>
+            <ul class="cliente-list">
+                <li>Juan Pérez - Cliente frecuente</li>
+                <li>María García - Empresa S.A.</li>
+                <li>Carlos Martínez - Contado</li>
+            </ul>
+        </section>
+
+        <section class="items-panel">
+            <div class="items-header">
+                <h2>Items de Venta</h2>
+                <button type="button">Agregar Item</button>
+            </div>
+            <div class="items-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Valor Unitario</th>
+                            <th>Impuesto</th>
+                            <th>Descuento</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Producto A</td>
+                            <td>2</td>
+                            <td>$50.00</td>
+                            <td>$9.00</td>
+                            <td>$0.00</td>
+                            <td>$109.00</td>
+                        </tr>
+                        <tr>
+                            <td>Producto B</td>
+                            <td>1</td>
+                            <td>$75.00</td>
+                            <td>$13.50</td>
+                            <td>$0.00</td>
+                            <td>$88.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+      <section class=" footer">
+        <p> ABL.Soluciones ® 2026. Todos los derechos reservados</p>
+    </section>
+</body>
+</html>

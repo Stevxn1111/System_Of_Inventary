@@ -1,0 +1,114 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url("../imagenes/img\ formulario\ de\ inscripcion.jpg");
+    background-size:cover;
+    background-position: center;
+    margin: 25px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.formularioInscripcion{
+    width: 420px;
+    background : rgba(255, 255, 255, 0.40) ;
+    border: 2px solid rgba(255,255,255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: black;
+    border-radius: 10px;
+    padding: 30px 40px;
+
+}
+.login h2{
+    text-align: center;
+    font-size: 36px;
+
+}
+
+.login .campos{
+    position: relative ;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0 ;
+}
+.campos input{
+    width: 100%;
+    height: 100%;
+    background: transparent ;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding:20px 20px 20px 20px ;
+
+}
+.campos input::placeholder{
+    color: black;
+}
+.campos input:focus{
+    border-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.campos icono {
+    position: absolute;
+    right: 20px;
+    top:30%;
+    font-size: 20px;
+
+}
+#btn_registrar{
+    background-color: #4CAF50;
+    color: white;
+}
+#btn_limpiar{
+    background-color: #f44336;
+    color: white;
+}
+.botones{
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1 );
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 3px;
+    padding: 10px 10px 10px 5px;
+    margin-top: 20px;
+
+
+}
+.botones:hover {
+    /* Efecto "sobresalir" */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+

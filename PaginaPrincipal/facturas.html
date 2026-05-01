@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facturas - ABL Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="factura-header">
+        <h1 class="factura-title">Facturas</h1>
+        <p class="factura-subtitle">Aquí puedes revisar facturas y navegar por las secciones principales.</p>
+    </section>
+
+    <div class="factura-page">
+        <section class="listaMenu factura-sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#ingresos">Ingresos</a>
+                    <ul>
+                        <li><a href="facturas.html">Facturas</a></li>
+                        <li><a href="notas-credito.html">Notas Credito</a></li>
+                        <li><a href="notas-debito.html">Notas Debito</a></li>
+                    </ul>
+                </li>
+                <li><a href="#personas">Personas</a>
+                    <ul>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="empleados.html">Empleados</a></li>
+                    </ul>
+                </li>
+                <li><a href="#inventario">Inventario</a>
+                    <ul>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="categoria.html">Categoria</a></li>
+                        <li><a href="stok.html">Stok</a></li>
+                    </ul>
+                </li>
+                <li><a href="reportes.html">Reportes</a></li>
+            </ul>
+        </section>
+
+        <main class="factura-main">
+            <div class="factura-controls">
+                <div class="factura-buttons">
+                    <button type="button" onclick="location.href='nueva-factura.html'">Nueva Factura</button>
+                    <button type="button">Solicitud Reporte</button>
+                    <button type="button">Importar</button>
+                </div>
+                <div class="factura-search">
+                    <input type="text" placeholder="Buscar factura...">
+                </div>
+            </div>
+
+            <div class="factura-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Número</th>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Total</th>
+                            <th>Estado de Pago</th>
+                            <th>Estado de Emisión</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>2026-05-01</td>
+                            <td>Juan Pérez</td>
+                            <td>$100.00</td>
+                            <td>Pagado</td>
+                            <td>Emitida</td>
+                            <td>Ver</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>2026-05-02</td>
+                            <td>María García</td>
+                            <td>$75.00</td>
+                            <td>Pendiente</td>
+                            <td>Emitida</td>
+                            <td>Ver</td>
+                        </tr>
+                        <!-- Agrega más filas según necesites -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+      <section class=" footer">
+        <p> ABL.Soluciones ® 2026. Todos los derechos reservados</p>
+    </section>
+</body>
+</html>

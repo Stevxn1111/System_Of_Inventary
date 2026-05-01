@@ -1,0 +1,517 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #d7eef9 0%, #eef7fd 60%, #ffffff 100%);
+    font-family: Nunito, sans-serif, arial;
+}
+
+.tituloEmpresa{
+    font-family: Quicksand;
+
+    font-size: 40px;
+    justify-content:center;
+    display: flex;
+    color: rgb(0, 73, 102);
+}
+.menu{
+    display: flex;                    /* Activa el modo flexible */
+    justify-content: flex-start;      /* Botones a la izquierda */
+    gap: 10px;                        /* Espacio entre botones */
+    align-items: center;              /* Alinea verticalmente al centro */
+    height: 50px;                     /* Mismo alto que .navegacion */
+    padding: 15px;                    /* Mismo espaciado que .navegacion */
+    background-color: aliceblue;      /* Mismo fondo que .navegacion */
+}
+
+/* ESTILOS PARA BOTONES DE MENU */
+.menu button {
+    /* DIMENSIONES - Tamaño mediano */
+    width: 120px;               /* Ancho del botón en píxeles */
+    height: 45px;               /* Alto del botón en píxeles */
+    
+    /* TEXTO */
+    font-size: 16px;            /* Tamaño de la letra dentro del botón */
+    font-weight: bold;          /* Letra más gruesa/negrilla */
+    
+    /* ESPACIO INTERIOR */
+    padding: 10px 20px;         /* 10px arriba/abajo, 20px izq/der */
+    
+    /* ESTILOS VISUALES */
+    background-color: #28a745;  /* Color de fondo verde */
+    color: white;               /* Color del texto blanco */
+    border: none;               /* Sin borde */
+    border-radius: 5px;         /* Esquinas ligeramente redondeadas */
+    
+    /* INTERACCIÓN */
+    cursor: pointer;            /* Cursor cambia a manita */
+    transition: 0.3s;           /* Cambios suaves en 0.3 segundos */
+}
+
+/* Cuando pasas el mouse sobre el botón de menu */
+.menu button:hover {
+    background-color: #218838;  /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05);     /* Se agranda un 5% */
+}
+.navegacion{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: flex-end;    /* Botones a la derecha */
+    gap: 15px;
+   height: 50px;
+
+    font-size: 16px;
+    padding: 15px;
+    padding-right: 50px;          /* Espacio desde el borde derecho */
+
+   
+
+    
+
+}
+.listaMenu{
+    font-family: Nunito;
+    font-size: 32px;
+    display: block;
+    width: 320px;
+    max-width: 90vw;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    background-color: rgba(240, 248, 255, 0.95);
+    border: 1px solid #d0d7e2;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.listaMenu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.listaMenu li {
+    position: relative;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    background-color: white;
+    border: 1px solid #c7d3df;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.listaMenu li:hover {
+    background-color: #e8f4ff;
+}
+
+.listaMenu a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.listaMenu a:hover {
+    text-decoration: none;
+}
+
+.listaMenu ul ul {
+    margin-top: 5px;
+}
+
+.listaMenu ul ul li {
+    font-size: 0.85em;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+}
+
+.listaMenu ul ul {
+    display: none;
+    margin-top: 5px;
+    padding-left: 20px;
+    font-size: 0.85em;
+}
+
+.listaMenu li:hover > ul {
+    display: block;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -280px; /* Sube la imagen hacia arriba */
+}
+
+.logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ESTILOS PARA BOTONES DE NAVEGACIÓN */
+.navegacion button {
+    /* DIMENSIONES - Tamaño mediano */
+    width: auto;                /* Ancho automático según el contenido */
+    height: 45px;               /* Alto del botón en píxeles */
+    
+    /* TEXTO */
+    font-size: 16px;            /* Tamaño de la letra dentro del botón */
+    font-weight: bold;          /* Letra más gruesa/negrilla */
+    
+    /* ESPACIO INTERIOR */
+    padding: 12px 25px;         /* 12px arriba/abajo, 25px izq/der - aumentado */
+    
+    /* ESTILOS VISUALES */
+    background-color: #008099;  /* Color de fondo azul */
+    color: white;               /* Color del texto blanco */
+    border: none;               /* Sin borde */
+    border-radius: 5px;         /* Esquinas ligeramente redondeadas */
+    
+    /* INTERACCIÓN */
+    cursor: pointer;            /* Cursor cambia a manita */
+    transition: 0.3s;           /* Cambios suaves en 0.3 segundos */
+}
+
+/* Cuando pasas el mouse sobre el botón */
+.navegacion button:hover {
+    background-color: #0056b3;  /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05);     /* Se agranda un 5% */
+}
+
+.factura-page {
+    display: flex;
+    gap: 24px;
+    padding: 30px;
+    align-items: flex-start;
+}
+
+.factura-sidebar {
+    flex: 0 0 320px;
+    min-width: 280px;
+}
+
+.factura-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.factura-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 24px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.factura-title {
+    margin: 0;
+    font-size: 42px;
+    color: rgb(0, 73, 102);
+}
+
+.factura-subtitle {
+    margin: 0;
+    font-size: 18px;
+    color: #33475b;
+}
+
+.factura-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.factura-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.factura-buttons button {
+    background-color: #008099;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.factura-buttons button:hover {
+    background-color: #005f83;
+    transform: translateY(-1px);
+}
+
+.factura-search input {
+    width: 260px;
+    min-width: 180px;
+    border: 1px solid #bccad6;
+    border-radius: 10px;
+    padding: 12px 14px;
+    outline: none;
+    font-size: 15px;
+}
+
+.factura-search input:focus {
+    border-color: #008099;
+    box-shadow: 0 0 0 3px rgba(0, 128, 153, 0.12);
+}
+
+.factura-table-wrapper {
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.94);
+    padding: 18px;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.factura-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.factura-table-wrapper th,
+.factura-table-wrapper td {
+    border: 1px solid #d8e2ea;
+    padding: 12px 14px;
+    text-align: left;
+    color: #1b2a38;
+}
+
+.factura-table-wrapper th {
+    background-color: #e8f4ff;
+    font-weight: 700;
+}
+
+.factura-table-wrapper tr:nth-child(even) {
+    background-color: #f8fbff;
+}
+
+.factura-sidebar .listaMenu {
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.factura-sidebar .listaMenu li {
+    margin-bottom: 8px;
+    padding: 10px 12px;
+}
+
+.factura-sidebar .listaMenu h2 {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.nueva-factura-page {
+    padding: 40px;
+    background: linear-gradient(180deg, #d7eef9 0%, #eef7fd 60%, #ffffff 100%);
+}
+
+.nueva-factura-page .page-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: 1160px;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.95);
+    border: 1px solid #d0d7e2;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    padding: 32px;
+}
+
+.nueva-factura-page .page-main {
+    flex: 1 1 560px;
+    min-width: 300px;
+}
+
+.nueva-factura-page .cliente-panel {
+    flex: 0 0 340px;
+    margin-top: 0;
+}
+
+.nueva-factura-page h1 {
+    margin-top: 0;
+    color: rgb(0, 73, 102);
+}
+
+.nueva-factura-page .button-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.nueva-factura-page .button-row a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: #008099;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nueva-factura-page .button-row a:hover {
+    background-color: #005f83;
+}
+
+.nueva-factura-page .info-box {
+    margin-top: 16px;
+    padding: 18px;
+    background: #f5fbff;
+    border: 1px solid #cbe5f0;
+    border-radius: 12px;
+}
+
+.nueva-factura-page .cliente-panel {
+    flex: 0 0 340px;
+    margin-top: 0;
+    padding: 22px;
+    background: #f4fbff;
+    border: 1px solid #cbe5f0;
+    border-radius: 16px;
+}
+
+.nueva-factura-page .cliente-panel h2 {
+    margin-top: 0;
+    font-size: 26px;
+    color: rgb(0, 73, 102);
+}
+
+.nueva-factura-page .cliente-search input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #b8cbd7;
+    font-size: 16px;
+    margin-top: 12px;
+    box-sizing: border-box;
+}
+
+.nueva-factura-page .cliente-list {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nueva-factura-page .cliente-list li {
+    margin-bottom: 10px;
+    padding: 14px 16px;
+    background: white;
+    border: 1px solid #d6e4ec;
+    border-radius: 12px;
+}
+
+.nueva-factura-page .items-panel {
+    margin-top: 24px;
+    padding: 22px;
+    background: #f4fbff;
+    border: 1px solid #cbe5f0;
+    border-radius: 16px;
+}
+
+.nueva-factura-page .items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.nueva-factura-page .items-header h2 {
+    margin: 0;
+    font-size: 26px;
+    color: rgb(0, 73, 102);
+}
+
+.nueva-factura-page .items-header button {
+    background-color: #008099;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.nueva-factura-page .items-header button:hover {
+    background-color: #005f83;
+}
+
+.nueva-factura-page .items-table-wrapper {
+    overflow-x: auto;
+}
+
+.nueva-factura-page .items-table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nueva-factura-page .items-table-wrapper th,
+.nueva-factura-page .items-table-wrapper td {
+    border: 1px solid #d8e2ea;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.nueva-factura-page .items-table-wrapper th {
+    background-color: #e8f4ff;
+    font-weight: 700;
+}
+
+.nueva-factura-page .items-table-wrapper tr:nth-child(even) {
+    background-color: #f8fbff;
+}
+
+.nueva-factura-page .action-buttons-panel {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #d0d7e2;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nueva-factura-page .action-buttons-panel button {
+    background-color: #008099;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nueva-factura-page .action-buttons-panel button:hover {
+    background-color: #005f83;
+}
+
+.nueva-factura-page .action-buttons-panel .btn-volver {
+    background-color: #6c757d;
+    margin-left: auto;
+}
+
+.nueva-factura-page .action-buttons-panel .btn-volver:hover {
+    background-color: #5a6268;
+}
