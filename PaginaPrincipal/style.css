@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(180deg, #d7eef9 0%, #eef7fd 60%, #ffffff 100%);
+    background: linear-gradient(180deg, white 0%, #eef7fd 60%, #ffffff 100%);
     font-family: Nunito, sans-serif, arial;
 }
 
@@ -13,21 +13,56 @@ body {
     display: flex;
     color: rgb(0, 73, 102);
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo-header {
+    width: 150px;
+    height: 100px; /* Ajusta el tamaño según necesites */
+
+    width: auto;
+}
+.parrafo_principal{
+font-family: Nunito;
+text-align: center;
+font-size: 18px;
+color: black;
+}
+
+/*.coment{
+    font-family: Nunito;
+    font-size: 18px;
+    display: block;
+    width: 320px;
+    max-width: 90vw;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 15px;
+    background-color: rgba(240, 248, 255, 0.95);
+    border: 1px solid #d0d7e2;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}*/
 .menu{
+
     display: flex;                    /* Activa el modo flexible */
     justify-content: flex-start;      /* Botones a la izquierda */
     gap: 10px;                        /* Espacio entre botones */
     align-items: center;              /* Alinea verticalmente al centro */
     height: 50px;                     /* Mismo alto que .navegacion */
     padding: 15px;                    /* Mismo espaciado que .navegacion */
-    background-color: aliceblue;      /* Mismo fondo que .navegacion */
+    background-color: rgb(142, 195, 242);      /* Mismo fondo que .navegacion */
 }
 
 /* ESTILOS PARA BOTONES DE MENU */
 .menu button {
     /* DIMENSIONES - Tamaño mediano */
-    width: 120px;               /* Ancho del botón en píxeles */
-    height: 45px;               /* Alto del botón en píxeles */
+    width: 110px;               /* Ancho del botón en píxeles */
+    height: 40px;               /* Alto del botón en píxeles */
     
     /* TEXTO */
     font-size: 16px;            /* Tamaño de la letra dentro del botón */
@@ -40,7 +75,7 @@ body {
     background-color: #28a745;  /* Color de fondo verde */
     color: white;               /* Color del texto blanco */
     border: none;               /* Sin borde */
-    border-radius: 5px;         /* Esquinas ligeramente redondeadas */
+    border-radius: 7px;         /* Esquinas ligeramente redondeadas */
     
     /* INTERACCIÓN */
     cursor: pointer;            /* Cursor cambia a manita */
@@ -57,26 +92,26 @@ body {
     display: flex;
     justify-content: flex-end;    /* Botones a la derecha */
     gap: 15px;
-   height: 50px;
+    height: 50px;
 
     font-size: 16px;
     padding: 15px;
     padding-right: 50px;          /* Espacio desde el borde derecho */
-
-   
-
-    
-
+}
+.h2_menu{
+    font-size: 50px;
+    margin-bottom: 14px;
+    color: rgb(0, 73, 102);
 }
 .listaMenu{
     font-family: Nunito;
-    font-size: 32px;
+    font-size: 25px;
     display: block;
     width: 320px;
     max-width: 90vw;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 10px;
     background-color: rgba(240, 248, 255, 0.95);
     border: 1px solid #d0d7e2;
     border-radius: 12px;
@@ -514,4 +549,12 @@ body {
 
 .nueva-factura-page .action-buttons-panel .btn-volver:hover {
     background-color: #5a6268;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-size: 14px;
+    border-top: 1px solid #e9ecef;
 }
