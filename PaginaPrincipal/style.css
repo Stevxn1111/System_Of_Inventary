@@ -558,3 +558,16 @@ color: black;
     font-size: 14px;
     border-top: 1px solid #e9ecef;
 }
+.menu_ver{
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*.menu_ver button{
+    display: block;
+    margin: 5px 0;
+}

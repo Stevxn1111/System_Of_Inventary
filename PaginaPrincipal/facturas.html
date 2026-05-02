@@ -53,7 +53,7 @@
             </div>
 
             <div class="factura-table-wrapper">
-                <table>
+                <table border="1">
                     <thead>
                         <tr>
                             <th>Número</th>
@@ -62,7 +62,7 @@
                             <th>Total</th>
                             <th>Estado de Pago</th>
                             <th>Estado de Emisión</th>
-                            <th>Acciones</th>
+                            <th>Acciones
                         </tr>
                     </thead>
                     <tbody>
@@ -73,7 +73,9 @@
                             <td>$100.00</td>
                             <td>Pagado</td>
                             <td>Emitida</td>
-                            <td>Ver</td>
+                            <td>
+                                <button onclick="mostrarMenu(event)">Ver</button></td>
+                        
                         </tr>
                         <tr>
                             <td>002</td>
@@ -93,5 +95,11 @@
       <section class=" footer">
         <p> ABL.Soluciones ® 2026. Todos los derechos reservados</p>
     </section>
+
+    <div id="menuOpciones" class="menu_ver">
+    <button onclick="editarFactura(1)">Editar</button>
+    <button onclick="eliminarFactura(1)">Eliminar</button>
+</div>
+    <script src="mostrar_ver.js" ></script>
 </body>
 </html>
