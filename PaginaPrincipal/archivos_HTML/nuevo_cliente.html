@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo Cliente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button type="button" onclick="window.location.href='clientes.html'">
+    ← Volver a Clientes
+</button>
+
+<div class="cliente-container">
+
+    <h2>Nuevo Cliente</h2>
+
+    <!-- Tipo identificación -->
+    <label>Tipo de identificación</label>
+
+    <select name="tipo_identificacion" id="tipo_identificacion" onchange="validarCampos()">
+
+        <option>Cédula de ciudadanía</option>
+        <option>Cédula de extranjería</option>
+        <option>Documento de identificación extranjero</option>
+        <option value="nit">NIT</option>
+        <option value="nit_otro">NIT de otro país</option>
+        <option>NUIP</option>
+        <option>Pasaporte</option>
+        <option>PEP</option>
+        <option>Permiso de protección temporal</option>
+        <option>Registro civil</option>
+        <option>Tarjeta de extranjería</option>
+        <option>Tarjeta de identidad</option>
+
+    </select>
+
+    <br><br>
+
+    <label>Primer nombre</label>
+    <input type="text" id="primer_nombre">
+
+    <br><br>
+
+    <label>Segundo nombre</label>
+    <input type="text" id="segundo_nombre">
+
+    <br><br>
+
+    <label>Primer apellido</label>
+    <input type="text" id="primer_apellido">
+
+    <br><br>
+
+    <label>Segundo apellido</label>
+    <input type="text" id="segundo_apellido">
+
+    <br><br>
+
+    <label>Naturaleza</label>
+
+    <select id="naturaleza">
+        <option>Persona jurídica</option>
+        <option>Persona natural</option>
+    </select>
+
+    <br><br>
+
+    <label>Nombre comercial</label>
+    <input type="text" id="nombre_comercial">
+
+    <br><br>
+
+    <label>Responsabilidades tributarias</label>
+
+    <select>
+        <option>IVA</option>
+        <option>INC</option>
+        <option>IVA e INC</option>
+        <option>No aplica</option>
+    </select>
+
+    <br><br>
+
+    <label>Número de identificación</label>
+    <input type="text">
+
+    <br><br>
+
+    <label>D. Verificación</label>
+    <input type="text" id="dv">
+
+    <br><br>
+
+    <label>Razón social</label>
+    <input type="text" id="razon_social">
+
+    <br><br>
+
+    <label>Responsabilidades fiscales</label>
+    <textarea></textarea>
+
+    <br><br>
+
+    <label>Correo recepción documentos electrónicos</label>
+    <input type="email">
+
+    <br><br>
+
+    <!-- PROVEEDOR -->
+    <details>
+
+        <summary><strong>Proveedor</strong></summary>
+
+        <br>
+
+        <label>Tipo proveedor</label>
+
+        <select id="tipo_proveedor">
+            <option>Residente</option>
+            <option>No residente</option>
+            <option>No aplica</option>
+        </select>
+
+    </details>
+
+    <br>
+
+    <!-- FORMULARIO AVANZADO -->
+    <details>
+
+        <summary><strong>Formulario avanzado</strong></summary>
+
+        <br>
+
+        <h3>Principal</h3>
+
+        <label>Dirección</label>
+        <input type="text">
+
+        <br><br>
+
+        <label>Ciudad</label>
+        <input type="text">
+
+        <br><br>
+
+        <label>Teléfono celular</label>
+        <input type="text">
+
+        <br><br>
+
+        <label>Teléfono fijo</label>
+        <input type="text">
+
+        <br><br>
+
+        <label>Correo electrónico contacto</label>
+        <input type="email">
+
+        <br><br>
+
+        <h3>Gestión de direcciones</h3>
+
+        <button type="button">
+            Agregar dirección
+        </button>
+
+        <button type="button">
+            Eliminar dirección
+        </button>
+
+    </details>
+
+    <br><br>
+
+    <button type="submit">
+        Guardar Cliente
+    </button>
+
+    <button type="reset">
+        Cancelar
+    </button>
+
+</div>
+
+<script>
+
+function validarCampos() {
+
+    let tipo = document.getElementById("tipo_identificacion").value;
+
+    let primerNombre = document.getElementById("primer_nombre");
+    let segundoNombre = document.getElementById("segundo_nombre");
+    let primerApellido = document.getElementById("primer_apellido");
+    let segundoApellido = document.getElementById("segundo_apellido");
+
+    let razonSocial = document.getElementById("razon_social");
+    let dv = document.getElementById("dv");
+
+    if (tipo == "nit" || tipo == "nit_otro") {
+
+        primerNombre.value = "No aplica";
+        segundoNombre.value = "No aplica";
+        primerApellido.value = "No aplica";
+        segundoApellido.value = "No aplica";
+
+        razonSocial.value = "";
+        dv.value = "";
+
+    } 
+    
+    else {
+
+        razonSocial.value = "No aplica";
+        dv.value = "No aplica";
+
+        primerNombre.value = "";
+        segundoNombre.value = "";
+        primerApellido.value = "";
+        segundoApellido.value = "";
+    }
+}
+
+</script>
+
+</body>
+</html>
