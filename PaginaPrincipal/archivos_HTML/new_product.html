@@ -16,8 +16,119 @@
     <section class="header">
         <h1 class="tituloEmpresa">A.B.L</h1>
         <p clas="parrafo_principal"><strong>Empresa encargada de gestionar tus facturas electrónicas de manera eficiente y segura</strong></p>
-        <img class="logo-header" src="img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
-    </section>
-    
+
+        <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
+    </section><div>
+    <h2>Nuevo Producto</h2>
+
+    <form action="" method="">
+
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="codigo">Código del Producto:</label>
+        <input type="text" id="codigo" name="codigo" required><br><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea><br><br>
+
+        <label for="precio_base">Precio Base:</label>
+        <input type="number" id="precio_base" name="precio" step="1,000" required><br><br>
+
+        <label for="categoria">Impuesto:</label>
+
+        <select id="impuesto" name="impuesto" required>
+            <option value="iva">IVA 19%</option>
+
+            <option value="excluido">Excluido</option>
+        </select>
+
+        <br><br>
+
+        <input type="checkbox" id="checkAvanzado" onchange="ClickCamposAvanzados()">
+        <label for="checkAvanzado">Formulario Avanzado</label>
+
+        <br><br>
+
+        <!-- opcion avanzada para ocultar campos al producto de formulario avanzado-->
+        <div id="camposAvanzados" hidden>
+            <label for="categoria">Categoría:</label>
+            <input type="text" placeholder="Categoria">
+
+            <label for="codigo_barras">Codigo de barras: </label>
+            <input type="text" placeholder="Código de barras">
+            
+            <label for="unidad_medida">Unidad de medida:</label>
+            
+        <select id="unidad_medida" name="unidad_medida" required> >
+            <option value="" selected disabled>
+        Unidad de medida
+            </option>
+            <optgroup label="Unidad">
+                <option value="unidad">Unidad</option>
+            </optgroup>
+
+            <optgroup label="Longitud">
+                <option value="cm">Centímetro (cm)</option>
+                <option value="m">Metro (m)</option>
+                <option value="pulgada">Pulgada</option>
+                <option value="km">Kilómetro</option>
+            </optgrou>
+
+            <optgroup label="Área">
+                <option value="cm2">Centimetros cuadrado (cm2)</option>
+                <option value="m2">Metro cuadrado (m²)</option>
+                <option value="hectarea">Hectárea</option>
+                <option value="pulgada_2">Pulgada cuadrada</option>
+            </optgroup>
+
+            <optgroup label="Volumen">
+                <option value="ml">Mililitro (ml)</option>
+                <option value="litro">Litro (l)</option>
+                <option value="galon">Galón</option>
+                <option value="cm3">Centímetro cúbico (cm³)</option>
+                <option value="m3">Metro cúbico (m³)</option>
+                <option value="litroX1min">Litro por minuto</option>
+
+            <optgroup label="Peso">
+                <option value="g">Gramo (g)</option>
+                <option value="kg">Kilogramo (kg)</option>
+                <option value="tonelada">Tonelada</option>
+                <option value="libra">Libra</option>
+            </optgroup>
+
+            <optgroup label="Tiempo">
+                <option value="mes">Mes</option>
+                <option value="hora">Hora (h)</option>
+                <option value="dia">Día</option>
+            </optgroup>
+
+            <optgroup label="Otro">
+                <option value="persona">Persona</option>
+                <option value="paquete">Paquete</option>
+            </select><br><br>
+
+            <label for="cantidad_inicial">Cantidad inicial:</label>
+            <input type="number" placeholder="0">
+
+            <label for="cantidad_min">Cantidad minima:</label>
+            <input type="number" placeholder="0">
+
+            <label for="factor_conversion">Factor de conversion :</label>
+            <select id="factor_conversion" name="factor_conversion" required>
+            <option value="" selected disabled>
+                No aplica
+            </option>
+            <option value="caja">Caja</option>
+            <option value=""></option>
+        </div>
+
+        <button type="submit">Guardar Producto</button>
+        <button type="">Cancelar</button>
+
+    </form>
+</div>
+
+<script src="../productos.js"></script>
 </body>
 </html>
