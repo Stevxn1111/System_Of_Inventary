@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="clientes-container">
+
+    <h1>Clientes</h1>
+
+    <!-- BARRA SUPERIOR -->
+    <div class="barra-clientes">
+
+        <!-- BUSCAR -->
+        <input 
+            type="text" 
+            id="buscar_cliente"
+            placeholder="Buscar por nombre o número de identificación">
+
+        <!-- BOTONES -->
+        <button type="button" onclick="filtrarClientes()">
+            Filtrar Cliente
+        </button>
+
+        <button type="button" onclick="limpiarBusqueda()">
+            Limpiar
+        </button>
+
+        <!-- NUEVO CLIENTE -->
+        <button type="button" onclick="window.location.href='nuevo_cliente.html'">
+            Nuevo Cliente
+        </button>
+
+    </div>
+
+    <br>
+
+    <!-- TABLA CLIENTES -->
+    <table border="1" width="100%">
+
+        <thead>
+
+            <tr>
+                <th>Tipo ID</th>
+                <th>Número Identificación</th>
+                <th>Nombre / Razón Social</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="tabla_clientes">
+
+            <tr>
+
+                <td>Cédula de ciudadanía</td>
+                <td>123456789</td>
+                <td>Juan Pérez</td>
+                <td>3001234567</td>
+                <td>juan@email.com</td>
+
+                <td>
+
+                    <button type="button" onclick="editarCliente(1)">
+                        Editar
+                    </button>
+
+                    <button type="button" onclick="eliminarCliente(1)">
+                        Eliminar
+                    </button>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>NIT</td>
+                <td>900123456</td>
+                <td>Empresa S.A.S</td>
+                <td>6081234567</td>
+                <td>empresa@email.com</td>
+
+                <td>
+
+                    <button type="button" onclick="editarCliente(2)">
+                        Editar
+                    </button>
+
+                    <button type="button" onclick="eliminarCliente(2)">
+                        Eliminar
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script>
+
+    function filtrarClientes() {
+
+        let input = document.getElementById("buscar_cliente").value.toLowerCase();
+
+        let tabla = document.getElementById("tabla_clientes");
+
+        let filas = tabla.getElementsByTagName("tr");
+
+        for (let i = 0; i < filas.length; i++) {
+
+            let texto = filas[i].innerText.toLowerCase();
+
+            if (texto.includes(input)) {
+
+                filas[i].style.display = "";
+
+            } else {
+
+                filas[i].style.display = "none";
+
+            }
+        }
+    }
+
+    function limpiarBusqueda() {
+
+        document.getElementById("buscar_cliente").value = "";
+
+        let filas = document.querySelectorAll("#tabla_clientes tr");
+
+        filas.forEach(fila => {
+
+            fila.style.display = "";
+
+        });
+    }
+
+    function editarCliente(id) {
+
+        alert("Editar cliente ID: " + id);
+    }
+
+    function eliminarCliente(id) {
+
+        let confirmar = confirm("¿Desea eliminar este cliente?");
+
+        if (confirmar) {
+
+            alert("Cliente eliminado correctamente");
+        }
+    }
+
+</script>
+
+</body>
+</html>
