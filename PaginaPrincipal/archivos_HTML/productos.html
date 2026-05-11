@@ -16,9 +16,14 @@
 <body>
     <section class="header">
         <h1 class="tituloEmpresa">A.B.L</h1>
-        <p clas="parrafo_principal"><strong>Empresa encargada de gestionar tus facturas electrónicas de manera eficiente y segura</strong></p>
-        <img class="logo-header" src="img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
+        <p clas="parrafo_principal"><strong>Empresa encargada de gestionar tus facturas electrónicas de manera eficiente y segura</strong>
+        </p>
+        <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
     </section>
+    <section class="factura-header">
+                <h1 class="factura-title">Productos</h1>
+                <p class="factura-subtitle">Agrega, edita y elimina productos</p>
+            </section>
 
     <section class="navegacion">
         <button type="button">Ayuda</button>
@@ -57,10 +62,7 @@
         </aside>
 
         <main class="factura-main">
-            <section class="factura-header">
-                <h1 class="factura-title">Productos</h1>
-                <p class="factura-subtitle">Agrega, edita y elimina productos</p>
-            </section>
+        
 
             <section class="factura-controls">
                 <div class="factura-buttons">
@@ -68,10 +70,9 @@
 
                         <button type="button">Borrar Inventario</button>
 
-                    <a href="new_product.html">
-                        <button type="button">Nuevo producto</button>
-                    </a>
+                        <button type="button" onclick="window.location.href='new_product.html'">Nuevo producto</button>
                     </div>
+                    
                 <div class="factura-search">
                     <input id="productSearch" type="search" placeholder="Buscar producto por nombre, código o categoría...">
                 </div>

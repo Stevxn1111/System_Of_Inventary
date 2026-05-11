@@ -19,10 +19,12 @@
 
         <img class="logo-header" src="../img/logo_ABL.jpeg" alt="Logo de ABL Solutions">
     </section><div>
-    <h2>Nuevo Producto</h2>
+    <h2 class="factura-title">Nuevo Producto</h2>
+
+    <p class="factura-subtitle">Agrega un nuevo producto a tu inventario</p>
 
     <form action="" method="">
-
+        
         <label for="nombre">Nombre del Producto:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
@@ -122,10 +124,14 @@
             <option value="caja">Caja</option>
             <option value=""></option>
         </div>
-
+        <section>
         <button type="submit">Guardar Producto</button>
         <button type="">Cancelar</button>
 
+        <button type="button" onclick="window.location.href='productos.html'">Atras</button>
+
+        </section>
+       
     </form>
 </div>
 
